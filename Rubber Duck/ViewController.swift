@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+//class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate {
     
     let messages = ["Check your semicolons.", "Did you mismatch your brackets?", "Were you trying to cause a new #gotofail bug by not putting curly braces around your statements?",
         "Are you sure that the cyclic dependency between objects is a good idea?", "What's the endianness of the machine you're trying to code on?",
@@ -31,11 +32,12 @@ class ViewController: UIViewController {
         "Say 'aluminium' instead of 'aluminum'. Sir Ive might help you in gratitude.", "Try slacking off. After all, you have the legitimate excuse of 'my code's compiling'."]
     
     let speechSynthesizer = AVSpeechSynthesizer()
-
-
+//    let voiceRecognizer : SKRecognizer
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print(speechKitAppKey)
     }
 
     override func didReceiveMemoryWarning() {
