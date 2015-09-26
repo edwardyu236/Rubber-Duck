@@ -11,7 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
 //class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate {
-    
+
     let messages = ["Check your semicolons.", "Did you mismatch your brackets?", "Were you trying to cause a new #gotofail bug by not putting curly braces around your statements?",
         "Are you sure that the cyclic dependency between objects is a good idea?", "What's the endianness of the machine you're trying to code on?",
         "Have you imported your library?", "Did you mismatch your format specifiers with printf?", "Are you casting correctly?", "Did you mix up your mutable and immutable objects?",
@@ -33,10 +33,17 @@ class ViewController: UIViewController {
     
     let speechSynthesizer = AVSpeechSynthesizer()
 //    let voiceRecognizer : SKRecognizer
+//    let appDelegate : AppDelegate?
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // Back in ViewController.m, replace the implementation of viewDidLoad method with the following:
+        activityIndicator.stopAnimating()
+        
         print(speechKitAppKey)
     }
 
@@ -46,18 +53,27 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tappedOnDuck(sender: UIButton) {
+        if activityIndicator.isAnimating() {
+            activityIndicator.stopAnimating()
+        } else {
+            activityIndicator.startAnimating()
+        }
+
+    }
+    
+    func displayAndSpeeakMessage() -> Void {
         let message = messages[random() % messages.count]
         
         let speechUtterance =  AVSpeechUtterance(string: message)
-        speechUtterance.voice = AVSpeechSynthesisVoice.init(language: "en-GB")
+        
         
         let alertController = UIAlertController(title: "Rubber Duck says...", message: message, preferredStyle: UIAlertControllerStyle.Alert)
         
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
-                (UIAlertAction) -> Void in
-                if self.speechSynthesizer.speaking {
-                    self.speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Word)
-                }
+            (UIAlertAction) -> Void in
+            if self.speechSynthesizer.speaking {
+                self.speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Word)
+            }
             })
         
         self.presentViewController(alertController, animated: true) {

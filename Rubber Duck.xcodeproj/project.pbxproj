@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8D2F05F41BB668BB00234177 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2F05F31BB668BB00234177 /* SpeechKit.framework */; settings = {ASSET_TAGS = (); }; };
+		8D2F05F91BB6726600234177 /* earcon_cancel.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F05F61BB6726600234177 /* earcon_cancel.wav */; settings = {ASSET_TAGS = (); }; };
+		8D2F05FA1BB6726600234177 /* earcon_done_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F05F71BB6726600234177 /* earcon_done_listening.wav */; settings = {ASSET_TAGS = (); }; };
+		8D2F05FB1BB6726600234177 /* earcon_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F05F81BB6726600234177 /* earcon_listening.wav */; settings = {ASSET_TAGS = (); }; };
 		8D40BAD21BB621A3009FC4D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAD11BB621A3009FC4D4 /* AppDelegate.swift */; };
 		8D40BAD41BB621A3009FC4D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAD31BB621A3009FC4D4 /* ViewController.swift */; };
 		8D40BAD71BB621A3009FC4D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D40BAD51BB621A3009FC4D4 /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 		8D2F05EF1BB6670A00234177 /* Rubber_Duck-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Rubber_Duck-Bridging-Header.h"; path = "Rubber Duck/Rubber_Duck-Bridging-Header.h"; sourceTree = "<group>"; };
 		8D2F05F31BB668BB00234177 /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpeechKit.framework; sourceTree = "<group>"; };
 		8D2F05F51BB66BA000234177 /* RubberDuckSpeechKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RubberDuckSpeechKit.h; path = "Rubber Duck/RubberDuckSpeechKit.h"; sourceTree = "<group>"; };
+		8D2F05F61BB6726600234177 /* earcon_cancel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_cancel.wav; sourceTree = "<group>"; };
+		8D2F05F71BB6726600234177 /* earcon_done_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_done_listening.wav; sourceTree = "<group>"; };
+		8D2F05F81BB6726600234177 /* earcon_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_listening.wav; sourceTree = "<group>"; };
 		8D40BACE1BB621A3009FC4D4 /* Rubber Duck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rubber Duck.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D40BAD11BB621A3009FC4D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D40BAD31BB621A3009FC4D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +88,9 @@
 		8D40BAC51BB621A3009FC4D4 = {
 			isa = PBXGroup;
 			children = (
+				8D2F05F61BB6726600234177 /* earcon_cancel.wav */,
+				8D2F05F71BB6726600234177 /* earcon_done_listening.wav */,
+				8D2F05F81BB6726600234177 /* earcon_listening.wav */,
 				8D2F05EF1BB6670A00234177 /* Rubber_Duck-Bridging-Header.h */,
 				8D2F05F51BB66BA000234177 /* RubberDuckSpeechKit.h */,
 				8D2F05F31BB668BB00234177 /* SpeechKit.framework */,
@@ -238,6 +247,9 @@
 			files = (
 				8D40BADC1BB621A3009FC4D4 /* LaunchScreen.storyboard in Resources */,
 				8D40BAD91BB621A3009FC4D4 /* Assets.xcassets in Resources */,
+				8D2F05FA1BB6726600234177 /* earcon_done_listening.wav in Resources */,
+				8D2F05F91BB6726600234177 /* earcon_cancel.wav in Resources */,
+				8D2F05FB1BB6726600234177 /* earcon_listening.wav in Resources */,
 				8D40BAD71BB621A3009FC4D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -420,6 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
