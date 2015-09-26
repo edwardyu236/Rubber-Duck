@@ -33,11 +33,18 @@ class ViewController: UIViewController {
     
     let speechSynthesizer = AVSpeechSynthesizer()
 //    let voiceRecognizer : SKRecognizer
+    var appDelegate : AppDelegate!
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print(speechKitAppKey)
+        activityIndicator.stopAnimating()
+        print(SpeechKitApplicationKey)
+//        appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        appDelegate.setupSpeechKitConnection()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,18 +53,26 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tappedOnDuck(sender: UIButton) {
+        if activityIndicator.isAnimating() {
+            activityIndicator.stopAnimating()
+        } else {
+            activityIndicator.startAnimating()
+        }
+    }
+    
+    func displayAndSpeeakMessage() -> Void {
         let message = messages[random() % messages.count]
         
         let speechUtterance =  AVSpeechUtterance(string: message)
-        speechUtterance.voice = AVSpeechSynthesisVoice.init(language: "en-GB")
+        
         
         let alertController = UIAlertController(title: "Rubber Duck says...", message: message, preferredStyle: UIAlertControllerStyle.Alert)
         
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
-                (UIAlertAction) -> Void in
-                if self.speechSynthesizer.speaking {
-                    self.speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Word)
-                }
+            (UIAlertAction) -> Void in
+            if self.speechSynthesizer.speaking {
+                self.speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Word)
+            }
             })
         
         self.presentViewController(alertController, animated: true) {

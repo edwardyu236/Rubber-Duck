@@ -18,6 +18,11 @@
 		8D4786B41BB7314C00EEA104 /* earcon_cancel.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786B11BB7314C00EEA104 /* earcon_cancel.wav */; settings = {ASSET_TAGS = (); }; };
 		8D4786B51BB7314C00EEA104 /* earcon_done_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786B21BB7314C00EEA104 /* earcon_done_listening.wav */; settings = {ASSET_TAGS = (); }; };
 		8D4786B61BB7314C00EEA104 /* earcon_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786B31BB7314C00EEA104 /* earcon_listening.wav */; settings = {ASSET_TAGS = (); }; };
+		8D4786B81BB7397D00EEA104 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4786B71BB7397D00EEA104 /* CFNetwork.framework */; };
+		8D4786BA1BB7398500EEA104 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4786B91BB7398500EEA104 /* SystemConfiguration.framework */; };
+		8D4786BC1BB7398C00EEA104 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4786BB1BB7398C00EEA104 /* Security.framework */; };
+		8D4786BE1BB73AFB00EEA104 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4786BD1BB73AFB00EEA104 /* AVFoundation.framework */; };
+		8D4786C01BB73B0800EEA104 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4786BF1BB73B0800EEA104 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		8D4786B11BB7314C00EEA104 /* earcon_cancel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_cancel.wav; sourceTree = "<group>"; };
 		8D4786B21BB7314C00EEA104 /* earcon_done_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_done_listening.wav; sourceTree = "<group>"; };
 		8D4786B31BB7314C00EEA104 /* earcon_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_listening.wav; sourceTree = "<group>"; };
+		8D4786B71BB7397D00EEA104 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		8D4786B91BB7398500EEA104 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8D4786BB1BB7398C00EEA104 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8D4786BD1BB73AFB00EEA104 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8D4786BF1BB73B0800EEA104 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +74,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4786C01BB73B0800EEA104 /* AudioToolbox.framework in Frameworks */,
+				8D4786BE1BB73AFB00EEA104 /* AVFoundation.framework in Frameworks */,
+				8D4786BC1BB7398C00EEA104 /* Security.framework in Frameworks */,
+				8D4786BA1BB7398500EEA104 /* SystemConfiguration.framework in Frameworks */,
+				8D4786B81BB7397D00EEA104 /* CFNetwork.framework in Frameworks */,
 				8D2F05F41BB668BB00234177 /* SpeechKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +103,11 @@
 		8D40BAC51BB621A3009FC4D4 = {
 			isa = PBXGroup;
 			children = (
+				8D4786BF1BB73B0800EEA104 /* AudioToolbox.framework */,
+				8D4786BD1BB73AFB00EEA104 /* AVFoundation.framework */,
+				8D4786BB1BB7398C00EEA104 /* Security.framework */,
+				8D4786B91BB7398500EEA104 /* SystemConfiguration.framework */,
+				8D4786B71BB7397D00EEA104 /* CFNetwork.framework */,
 				8D4786B11BB7314C00EEA104 /* earcon_cancel.wav */,
 				8D4786B21BB7314C00EEA104 /* earcon_done_listening.wav */,
 				8D4786B31BB7314C00EEA104 /* earcon_listening.wav */,
@@ -416,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -432,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

@@ -23,13 +23,21 @@
                                     <action selector="tappedOnDuck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kfD-bg-y8V"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cpr-hi-1M2">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LMz-iZ-y3A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ifr-AS-4Pu"/>
+                            <constraint firstItem="cpr-hi-1M2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="c9j-jJ-VHf"/>
                             <constraint firstItem="LMz-iZ-y3A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ca8-aj-dmi"/>
+                            <constraint firstItem="cpr-hi-1M2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cmS-Mg-Bhf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="cpr-hi-1M2" id="Bcn-C9-qFq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
