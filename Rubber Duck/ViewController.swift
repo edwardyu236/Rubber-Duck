@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         let message = messages[random() % messages.count]
         
         let speechUtterance =  AVSpeechUtterance(string: message)
-
+        speechUtterance.voice = AVSpeechSynthesisVoice.init(language: "en-US")
         
         let alertController = UIAlertController(title: "Rubber Duck says...", message: message, preferredStyle: UIAlertControllerStyle.Alert)
         
