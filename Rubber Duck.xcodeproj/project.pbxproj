@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D40BAD21BB621A3009FC4D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAD11BB621A3009FC4D4 /* AppDelegate.swift */; };
+		8D40BAD41BB621A3009FC4D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAD31BB621A3009FC4D4 /* ViewController.swift */; };
+		8D40BAD71BB621A3009FC4D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D40BAD51BB621A3009FC4D4 /* Main.storyboard */; };
+		8D40BAD91BB621A3009FC4D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D40BAD81BB621A3009FC4D4 /* Assets.xcassets */; };
+		8D40BADC1BB621A3009FC4D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D40BADA1BB621A3009FC4D4 /* LaunchScreen.storyboard */; };
+		8D40BAE71BB621A3009FC4D4 /* Rubber_DuckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAE61BB621A3009FC4D4 /* Rubber_DuckTests.swift */; };
+		8D40BAF21BB621A3009FC4D4 /* Rubber_DuckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAF11BB621A3009FC4D4 /* Rubber_DuckUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D40BAE31BB621A3009FC4D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D40BAC61BB621A3009FC4D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D40BACD1BB621A3009FC4D4;
+			remoteInfo = "Rubber Duck";
+		};
+		8D40BAEE1BB621A3009FC4D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D40BAC61BB621A3009FC4D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D40BACD1BB621A3009FC4D4;
+			remoteInfo = "Rubber Duck";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8D40BACE1BB621A3009FC4D4 /* Rubber Duck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rubber Duck.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D40BAD11BB621A3009FC4D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8D40BAD31BB621A3009FC4D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8D40BAD61BB621A3009FC4D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8D40BAD81BB621A3009FC4D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D40BADB1BB621A3009FC4D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D40BADD1BB621A3009FC4D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D40BAE21BB621A3009FC4D4 /* Rubber DuckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rubber DuckTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D40BAE61BB621A3009FC4D4 /* Rubber_DuckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rubber_DuckTests.swift; sourceTree = "<group>"; };
+		8D40BAE81BB621A3009FC4D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D40BAED1BB621A3009FC4D4 /* Rubber DuckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rubber DuckUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D40BAF11BB621A3009FC4D4 /* Rubber_DuckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rubber_DuckUITests.swift; sourceTree = "<group>"; };
+		8D40BAF31BB621A3009FC4D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D40BACB1BB621A3009FC4D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D40BADF1BB621A3009FC4D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D40BAEA1BB621A3009FC4D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D40BAC51BB621A3009FC4D4 = {
+			isa = PBXGroup;
+			children = (
+				8D40BAD01BB621A3009FC4D4 /* Rubber Duck */,
+				8D40BAE51BB621A3009FC4D4 /* Rubber DuckTests */,
+				8D40BAF01BB621A3009FC4D4 /* Rubber DuckUITests */,
+				8D40BACF1BB621A3009FC4D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8D40BACF1BB621A3009FC4D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D40BACE1BB621A3009FC4D4 /* Rubber Duck.app */,
+				8D40BAE21BB621A3009FC4D4 /* Rubber DuckTests.xctest */,
+				8D40BAED1BB621A3009FC4D4 /* Rubber DuckUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D40BAD01BB621A3009FC4D4 /* Rubber Duck */ = {
+			isa = PBXGroup;
+			children = (
+				8D40BAD11BB621A3009FC4D4 /* AppDelegate.swift */,
+				8D40BAD31BB621A3009FC4D4 /* ViewController.swift */,
+				8D40BAD51BB621A3009FC4D4 /* Main.storyboard */,
+				8D40BAD81BB621A3009FC4D4 /* Assets.xcassets */,
+				8D40BADA1BB621A3009FC4D4 /* LaunchScreen.storyboard */,
+				8D40BADD1BB621A3009FC4D4 /* Info.plist */,
+			);
+			path = "Rubber Duck";
+			sourceTree = "<group>";
+		};
+		8D40BAE51BB621A3009FC4D4 /* Rubber DuckTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D40BAE61BB621A3009FC4D4 /* Rubber_DuckTests.swift */,
+				8D40BAE81BB621A3009FC4D4 /* Info.plist */,
+			);
+			path = "Rubber DuckTests";
+			sourceTree = "<group>";
+		};
+		8D40BAF01BB621A3009FC4D4 /* Rubber DuckUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8D40BAF11BB621A3009FC4D4 /* Rubber_DuckUITests.swift */,
+				8D40BAF31BB621A3009FC4D4 /* Info.plist */,
+			);
+			path = "Rubber DuckUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D40BACD1BB621A3009FC4D4 /* Rubber Duck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D40BAF61BB621A3009FC4D4 /* Build configuration list for PBXNativeTarget "Rubber Duck" */;
+			buildPhases = (
+				8D40BACA1BB621A3009FC4D4 /* Sources */,
+				8D40BACB1BB621A3009FC4D4 /* Frameworks */,
+				8D40BACC1BB621A3009FC4D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rubber Duck";
+			productName = "Rubber Duck";
+			productReference = 8D40BACE1BB621A3009FC4D4 /* Rubber Duck.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8D40BAE11BB621A3009FC4D4 /* Rubber DuckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D40BAF91BB621A3009FC4D4 /* Build configuration list for PBXNativeTarget "Rubber DuckTests" */;
+			buildPhases = (
+				8D40BADE1BB621A3009FC4D4 /* Sources */,
+				8D40BADF1BB621A3009FC4D4 /* Frameworks */,
+				8D40BAE01BB621A3009FC4D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D40BAE41BB621A3009FC4D4 /* PBXTargetDependency */,
+			);
+			name = "Rubber DuckTests";
+			productName = "Rubber DuckTests";
+			productReference = 8D40BAE21BB621A3009FC4D4 /* Rubber DuckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8D40BAEC1BB621A3009FC4D4 /* Rubber DuckUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D40BAFC1BB621A3009FC4D4 /* Build configuration list for PBXNativeTarget "Rubber DuckUITests" */;
+			buildPhases = (
+				8D40BAE91BB621A3009FC4D4 /* Sources */,
+				8D40BAEA1BB621A3009FC4D4 /* Frameworks */,
+				8D40BAEB1BB621A3009FC4D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D40BAEF1BB621A3009FC4D4 /* PBXTargetDependency */,
+			);
+			name = "Rubber DuckUITests";
+			productName = "Rubber DuckUITests";
+			productReference = 8D40BAED1BB621A3009FC4D4 /* Rubber DuckUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D40BAC61BB621A3009FC4D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "The Rubber Ducklings";
+				TargetAttributes = {
+					8D40BACD1BB621A3009FC4D4 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					8D40BAE11BB621A3009FC4D4 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 8D40BACD1BB621A3009FC4D4;
+					};
+					8D40BAEC1BB621A3009FC4D4 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 8D40BACD1BB621A3009FC4D4;
+					};
+				};
+			};
+			buildConfigurationList = 8D40BAC91BB621A3009FC4D4 /* Build configuration list for PBXProject "Rubber Duck" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8D40BAC51BB621A3009FC4D4;
+			productRefGroup = 8D40BACF1BB621A3009FC4D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D40BACD1BB621A3009FC4D4 /* Rubber Duck */,
+				8D40BAE11BB621A3009FC4D4 /* Rubber DuckTests */,
+				8D40BAEC1BB621A3009FC4D4 /* Rubber DuckUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D40BACC1BB621A3009FC4D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D40BADC1BB621A3009FC4D4 /* LaunchScreen.storyboard in Resources */,
+				8D40BAD91BB621A3009FC4D4 /* Assets.xcassets in Resources */,
+				8D40BAD71BB621A3009FC4D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D40BAE01BB621A3009FC4D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D40BAEB1BB621A3009FC4D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D40BACA1BB621A3009FC4D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D40BAD41BB621A3009FC4D4 /* ViewController.swift in Sources */,
+				8D40BAD21BB621A3009FC4D4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D40BADE1BB621A3009FC4D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D40BAE71BB621A3009FC4D4 /* Rubber_DuckTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D40BAE91BB621A3009FC4D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D40BAF21BB621A3009FC4D4 /* Rubber_DuckUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D40BAE41BB621A3009FC4D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D40BACD1BB621A3009FC4D4 /* Rubber Duck */;
+			targetProxy = 8D40BAE31BB621A3009FC4D4 /* PBXContainerItemProxy */;
+		};
+		8D40BAEF1BB621A3009FC4D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D40BACD1BB621A3009FC4D4 /* Rubber Duck */;
+			targetProxy = 8D40BAEE1BB621A3009FC4D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8D40BAD51BB621A3009FC4D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D40BAD61BB621A3009FC4D4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8D40BADA1BB621A3009FC4D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D40BADB1BB621A3009FC4D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8D40BAF41BB621A3009FC4D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8D40BAF51BB621A3009FC4D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D40BAF71BB621A3009FC4D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Rubber Duck/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-Duck";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8D40BAF81BB621A3009FC4D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Rubber Duck/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-Duck";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8D40BAFA1BB621A3009FC4D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Rubber DuckTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-DuckTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rubber Duck.app/Rubber Duck";
+			};
+			name = Debug;
+		};
+		8D40BAFB1BB621A3009FC4D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Rubber DuckTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-DuckTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rubber Duck.app/Rubber Duck";
+			};
+			name = Release;
+		};
+		8D40BAFD1BB621A3009FC4D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Rubber DuckUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-DuckUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Rubber Duck";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8D40BAFE1BB621A3009FC4D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Rubber DuckUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-DuckUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Rubber Duck";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D40BAC91BB621A3009FC4D4 /* Build configuration list for PBXProject "Rubber Duck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D40BAF41BB621A3009FC4D4 /* Debug */,
+				8D40BAF51BB621A3009FC4D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D40BAF61BB621A3009FC4D4 /* Build configuration list for PBXNativeTarget "Rubber Duck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D40BAF71BB621A3009FC4D4 /* Debug */,
+				8D40BAF81BB621A3009FC4D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8D40BAF91BB621A3009FC4D4 /* Build configuration list for PBXNativeTarget "Rubber DuckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D40BAFA1BB621A3009FC4D4 /* Debug */,
+				8D40BAFB1BB621A3009FC4D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8D40BAFC1BB621A3009FC4D4 /* Build configuration list for PBXNativeTarget "Rubber DuckUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D40BAFD1BB621A3009FC4D4 /* Debug */,
+				8D40BAFE1BB621A3009FC4D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D40BAC61BB621A3009FC4D4 /* Project object */;
+}
