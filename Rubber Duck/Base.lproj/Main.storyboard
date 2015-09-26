@@ -37,6 +37,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="cpr-hi-1M2" id="Bcn-C9-qFq"/>
+                        <outlet property="duckButton" destination="LMz-iZ-y3A" id="FHL-lv-pXm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

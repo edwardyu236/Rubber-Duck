@@ -9,8 +9,8 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
-//class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate {
+//class ViewController: UIViewController {
+class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate {
     
     let messages = ["Check your semicolons.", "Did you mismatch your brackets?", "Were you trying to cause a new #gotofail bug by not putting curly braces around your statements?",
         "Are you sure that the cyclic dependency between objects is a good idea?", "What's the endianness of the machine you're trying to code on?",
@@ -32,9 +32,13 @@ class ViewController: UIViewController {
         "Say 'aluminium' instead of 'aluminum'. Sir Ive might help you in gratitude.", "Try slacking off. After all, you have the legitimate excuse of 'my code's compiling'."]
     
     let speechSynthesizer = AVSpeechSynthesizer()
-//    let voiceRecognizer : SKRecognizer
+    
+//    var voiceRecognizer = SKRecognizer(type: SKSearchRecognizerType, detection: UInt(SKShortEndOfSpeechDetection), language: "en-US", delegate: self as! SKRecognizerDelegate)
+    var voiceRecognizer : SKRecognizer?
+
     var appDelegate : AppDelegate!
     
+    @IBOutlet weak var duckButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
@@ -43,8 +47,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         activityIndicator.stopAnimating()
         print(SpeechKitApplicationKey)
-//        appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        appDelegate.setupSpeechKitConnection()
+        appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.setupSpeechKitConnection()
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,14 +57,60 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tappedOnDuck(sender: UIButton) {
-        if activityIndicator.isAnimating() {
-            activityIndicator.stopAnimating()
+        sender.selected = !sender.selected
+        
+        if sender.selected {
+            voiceRecognizer = SKRecognizer(type: SKDictationRecognizerType, detection: UInt(SKShortEndOfSpeechDetection), language: "en-US", delegate: self as SKRecognizerDelegate)
+
         } else {
-            activityIndicator.startAnimating()
+            if let recognizer = voiceRecognizer {
+                recognizer.stopRecording()
+                recognizer.cancel()
+            }
+            
         }
     }
     
-    func displayAndSpeeakMessage() -> Void {
+
+    
+    func recognizerDidBeginRecording(recognizer: SKRecognizer!) {
+        activityIndicator.startAnimating()
+        print("Listening")
+    }
+    
+    func recognizerDidFinishRecording(recognizer: SKRecognizer!) {
+        activityIndicator.stopAnimating()
+        print("Done Listening")
+    }
+    
+    func recognizer(recognizer: SKRecognizer!, didFinishWithError error: NSError!, suggestion: String!) {
+        print("Recognizer finished with error!")
+        duckButton.selected = !duckButton.selected
+        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle:.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func recognizer(recognizer: SKRecognizer!, didFinishWithResults results: SKRecognition!) {
+        print("Recognized with following results:")
+        let numberOfResults : CLong = results.results.count
+        
+        if numberOfResults > 0 {
+            let textResult = results.firstResult()
+            print(textResult)
+            let alertController = UIAlertController(title: "You said", message: textResult, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler:nil))
+            presentViewController(alertController, animated: true, completion: nil)
+        }
+        duckButton.selected = !duckButton.selected
+        
+        if let recognizer = voiceRecognizer {
+            recognizer.cancel()
+        }
+        
+    }
+    
+    func displayAndSpeakMessage() -> Void {
         let message = messages[random() % messages.count]
         
         let speechUtterance =  AVSpeechUtterance(string: message)
@@ -80,7 +130,6 @@ class ViewController: UIViewController {
             self.speechSynthesizer.speakUtterance(speechUtterance)
         }
     }
-    
 
 }
 
