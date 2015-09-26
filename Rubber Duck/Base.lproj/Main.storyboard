@@ -23,11 +23,21 @@
                                     <action selector="tappedOnDuck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kfD-bg-y8V"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Np-3X-TVG">
+                                <rect key="frame" x="252" y="359" width="96" height="30"/>
+                                <state key="normal" title="Test Listening">
+                                    <color key="titleColor" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="testListening:" destination="BYZ-38-t0r" eventType="touchUpInside" id="btI-PN-ZrR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LMz-iZ-y3A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ifr-AS-4Pu"/>
                             <constraint firstItem="LMz-iZ-y3A" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ca8-aj-dmi"/>
+                            <constraint firstItem="2Np-3X-TVG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iLV-jr-VLA"/>
                         </constraints>
                     </view>
                 </viewController>

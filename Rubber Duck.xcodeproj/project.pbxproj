@@ -14,6 +14,10 @@
 		8D40BADC1BB621A3009FC4D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D40BADA1BB621A3009FC4D4 /* LaunchScreen.storyboard */; };
 		8D40BAE71BB621A3009FC4D4 /* Rubber_DuckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAE61BB621A3009FC4D4 /* Rubber_DuckTests.swift */; };
 		8D40BAF21BB621A3009FC4D4 /* Rubber_DuckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAF11BB621A3009FC4D4 /* Rubber_DuckUITests.swift */; };
+		8D4265431BB638E40017E3DE /* AcousticModelEnglish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D42653F1BB638E40017E3DE /* AcousticModelEnglish.bundle */; settings = {ASSET_TAGS = (); }; };
+		8D4265441BB638E40017E3DE /* AcousticModelSpanish.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D4265401BB638E40017E3DE /* AcousticModelSpanish.bundle */; settings = {ASSET_TAGS = (); }; };
+		8D4265451BB638E40017E3DE /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4265411BB638E40017E3DE /* OpenEars.framework */; settings = {ASSET_TAGS = (); }; };
+		8D4265461BB638E40017E3DE /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4265421BB638E40017E3DE /* Slt.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,11 @@
 		8D40BAED1BB621A3009FC4D4 /* Rubber DuckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rubber DuckUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D40BAF11BB621A3009FC4D4 /* Rubber_DuckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rubber_DuckUITests.swift; sourceTree = "<group>"; };
 		8D40BAF31BB621A3009FC4D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D42653F1BB638E40017E3DE /* AcousticModelEnglish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelEnglish.bundle; sourceTree = "<group>"; };
+		8D4265401BB638E40017E3DE /* AcousticModelSpanish.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AcousticModelSpanish.bundle; sourceTree = "<group>"; };
+		8D4265411BB638E40017E3DE /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		8D4265421BB638E40017E3DE /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		8D4265481BB63A2C0017E3DE /* Rubber_Duck-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Rubber_Duck-Bridging-Header.h"; path = "Rubber Duck/Rubber_Duck-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4265461BB638E40017E3DE /* Slt.framework in Frameworks */,
+				8D4265451BB638E40017E3DE /* OpenEars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +88,8 @@
 		8D40BAC51BB621A3009FC4D4 = {
 			isa = PBXGroup;
 			children = (
+				8D4265481BB63A2C0017E3DE /* Rubber_Duck-Bridging-Header.h */,
+				8D42653E1BB638E40017E3DE /* Framework */,
 				8D40BAD01BB621A3009FC4D4 /* Rubber Duck */,
 				8D40BAE51BB621A3009FC4D4 /* Rubber DuckTests */,
 				8D40BAF01BB621A3009FC4D4 /* Rubber DuckUITests */,
@@ -123,6 +136,17 @@
 				8D40BAF31BB621A3009FC4D4 /* Info.plist */,
 			);
 			path = "Rubber DuckUITests";
+			sourceTree = "<group>";
+		};
+		8D42653E1BB638E40017E3DE /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				8D42653F1BB638E40017E3DE /* AcousticModelEnglish.bundle */,
+				8D4265401BB638E40017E3DE /* AcousticModelSpanish.bundle */,
+				8D4265411BB638E40017E3DE /* OpenEars.framework */,
+				8D4265421BB638E40017E3DE /* Slt.framework */,
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D40BADC1BB621A3009FC4D4 /* LaunchScreen.storyboard in Resources */,
+				8D4265441BB638E40017E3DE /* AcousticModelSpanish.bundle in Resources */,
+				8D4265431BB638E40017E3DE /* AcousticModelEnglish.bundle in Resources */,
 				8D40BAD91BB621A3009FC4D4 /* Assets.xcassets in Resources */,
 				8D40BAD71BB621A3009FC4D4 /* Main.storyboard in Resources */,
 			);
@@ -396,10 +422,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = "Rubber Duck/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-Duck";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Rubber Duck/Rubber_Duck-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -407,10 +438,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = "Rubber Duck/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-Duck";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Rubber Duck/Rubber_Duck-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -481,6 +517,7 @@
 				8D40BAF81BB621A3009FC4D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D40BAF91BB621A3009FC4D4 /* Build configuration list for PBXNativeTarget "Rubber DuckTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +526,7 @@
 				8D40BAFB1BB621A3009FC4D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D40BAFC1BB621A3009FC4D4 /* Build configuration list for PBXNativeTarget "Rubber DuckUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +535,7 @@
 				8D40BAFE1BB621A3009FC4D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

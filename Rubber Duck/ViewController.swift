@@ -64,6 +64,48 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func testListening(sender: UIButton) {
+        
+        let lmGenerator = OELanguageModelGenerator()
+        let words = ["crash", "fail", "broke"]
+        let name = "RubberDuckLanguageModel"
+        
+        let error = lmGenerator.generateLanguageModelFromArray(words, withFilesNamed: name, forAcousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish") )
+
+        let lmPath: String?
+        let dicPath: String?
+        
+        if error == nil {
+            lmPath = lmGenerator.pathToSuccessfullyGeneratedLanguageModelWithRequestedName(name)
+            dicPath = lmGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName(name)
+        } else {
+            let alertController = UIAlertController(title: "Error", message: "Couldn't load lang model/dictionary", preferredStyle: .Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+            return
+        }
+        
+        
+        let singleton = OEPocketsphinxController.sharedInstance()
+        singleton.requestMicPermission()
+        do {
+            try singleton.setActive(true)
+        } catch _ as NSError {
+            let alertController = UIAlertController(title: "Error", message: "Couldn't set singleton active", preferredStyle: .Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+            return
+
+        }
+        
+        singleton.startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF:false); // Change "AcousticModelEnglish" to "AcousticModelSpanish" to perform Spanish recognition instead of English.
+        
+        print("This is hopefully listening...")
+//        [[OEPocketsphinxController sharedInstance] startListeningWithLanguageModelAtPath:lmPath dictionaryAtPath:dicPath acousticModelAtPath:[OEAcousticModel pathToModel:@"AcousticModelEnglish"] languageModelIsJSGF:NO]; // Change "AcousticModelEnglish" to "AcousticModelSpanish" to perform Spanish recognition instead of English.
+
+    }
 
 }
 
