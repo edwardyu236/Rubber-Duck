@@ -15,6 +15,9 @@
 		8D40BADC1BB621A3009FC4D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D40BADA1BB621A3009FC4D4 /* LaunchScreen.storyboard */; };
 		8D40BAE71BB621A3009FC4D4 /* Rubber_DuckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAE61BB621A3009FC4D4 /* Rubber_DuckTests.swift */; };
 		8D40BAF21BB621A3009FC4D4 /* Rubber_DuckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAF11BB621A3009FC4D4 /* Rubber_DuckUITests.swift */; };
+		8D4786B41BB7314C00EEA104 /* earcon_cancel.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786B11BB7314C00EEA104 /* earcon_cancel.wav */; settings = {ASSET_TAGS = (); }; };
+		8D4786B51BB7314C00EEA104 /* earcon_done_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786B21BB7314C00EEA104 /* earcon_done_listening.wav */; settings = {ASSET_TAGS = (); }; };
+		8D4786B61BB7314C00EEA104 /* earcon_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786B31BB7314C00EEA104 /* earcon_listening.wav */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		8D40BAED1BB621A3009FC4D4 /* Rubber DuckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rubber DuckUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D40BAF11BB621A3009FC4D4 /* Rubber_DuckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rubber_DuckUITests.swift; sourceTree = "<group>"; };
 		8D40BAF31BB621A3009FC4D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D4786B11BB7314C00EEA104 /* earcon_cancel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_cancel.wav; sourceTree = "<group>"; };
+		8D4786B21BB7314C00EEA104 /* earcon_done_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_done_listening.wav; sourceTree = "<group>"; };
+		8D4786B31BB7314C00EEA104 /* earcon_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_listening.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,9 @@
 		8D40BAC51BB621A3009FC4D4 = {
 			isa = PBXGroup;
 			children = (
+				8D4786B11BB7314C00EEA104 /* earcon_cancel.wav */,
+				8D4786B21BB7314C00EEA104 /* earcon_done_listening.wav */,
+				8D4786B31BB7314C00EEA104 /* earcon_listening.wav */,
 				8D2F05EF1BB6670A00234177 /* Rubber_Duck-Bridging-Header.h */,
 				8D2F05F51BB66BA000234177 /* RubberDuckSpeechKit.h */,
 				8D2F05F31BB668BB00234177 /* SpeechKit.framework */,
@@ -238,6 +247,9 @@
 			files = (
 				8D40BADC1BB621A3009FC4D4 /* LaunchScreen.storyboard in Resources */,
 				8D40BAD91BB621A3009FC4D4 /* Assets.xcassets in Resources */,
+				8D4786B51BB7314C00EEA104 /* earcon_done_listening.wav in Resources */,
+				8D4786B41BB7314C00EEA104 /* earcon_cancel.wav in Resources */,
+				8D4786B61BB7314C00EEA104 /* earcon_listening.wav in Resources */,
 				8D40BAD71BB621A3009FC4D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
