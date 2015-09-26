@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -29,7 +30,8 @@ class ViewController: UIViewController {
         "Just give up. It's impossible to fix thousands of lines of spaghetti code anyways.", "Maybe a segmentation fault is just the best fate of your shoddy program.",
         "Say 'aluminium' instead of 'aluminum'. Sir Ive might help you in gratitude.", "Try slacking off. After all, you have the legitimate excuse of 'my code's compiling'."]
     
-    
+    let speechSynthesizer = AVSpeechSynthesizer()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +46,17 @@ class ViewController: UIViewController {
     @IBAction func tappedOnDuck(sender: UIButton) {
         let message = messages[random() % messages.count]
         
+        let speechUtterance =  AVSpeechUtterance(string: message)
+
+        
         let alertController = UIAlertController(title: "Rubber Duck says...", message: message, preferredStyle: UIAlertControllerStyle.Alert)
         
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.presentViewController(alertController, animated: true) {
+            () -> Void in
+            self.speechSynthesizer.speakUtterance(speechUtterance)
+        }
     }
     
 
