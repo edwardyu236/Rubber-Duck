@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D2F05F41BB668BB00234177 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2F05F31BB668BB00234177 /* SpeechKit.framework */; settings = {ASSET_TAGS = (); }; };
 		8D40BAD21BB621A3009FC4D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAD11BB621A3009FC4D4 /* AppDelegate.swift */; };
 		8D40BAD41BB621A3009FC4D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAD31BB621A3009FC4D4 /* ViewController.swift */; };
 		8D40BAD71BB621A3009FC4D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D40BAD51BB621A3009FC4D4 /* Main.storyboard */; };
@@ -14,6 +15,14 @@
 		8D40BADC1BB621A3009FC4D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D40BADA1BB621A3009FC4D4 /* LaunchScreen.storyboard */; };
 		8D40BAE71BB621A3009FC4D4 /* Rubber_DuckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAE61BB621A3009FC4D4 /* Rubber_DuckTests.swift */; };
 		8D40BAF21BB621A3009FC4D4 /* Rubber_DuckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAF11BB621A3009FC4D4 /* Rubber_DuckUITests.swift */; };
+		8D4786B41BB7314C00EEA104 /* earcon_cancel.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786B11BB7314C00EEA104 /* earcon_cancel.wav */; settings = {ASSET_TAGS = (); }; };
+		8D4786B51BB7314C00EEA104 /* earcon_done_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786B21BB7314C00EEA104 /* earcon_done_listening.wav */; settings = {ASSET_TAGS = (); }; };
+		8D4786B61BB7314C00EEA104 /* earcon_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786B31BB7314C00EEA104 /* earcon_listening.wav */; settings = {ASSET_TAGS = (); }; };
+		8D4786B81BB7397D00EEA104 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4786B71BB7397D00EEA104 /* CFNetwork.framework */; };
+		8D4786BA1BB7398500EEA104 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4786B91BB7398500EEA104 /* SystemConfiguration.framework */; };
+		8D4786BC1BB7398C00EEA104 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4786BB1BB7398C00EEA104 /* Security.framework */; };
+		8D4786BE1BB73AFB00EEA104 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4786BD1BB73AFB00EEA104 /* AVFoundation.framework */; };
+		8D4786C01BB73B0800EEA104 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4786BF1BB73B0800EEA104 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D2F05EF1BB6670A00234177 /* Rubber_Duck-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Rubber_Duck-Bridging-Header.h"; path = "Rubber Duck/Rubber_Duck-Bridging-Header.h"; sourceTree = "<group>"; };
+		8D2F05F31BB668BB00234177 /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpeechKit.framework; sourceTree = "<group>"; };
+		8D2F05F51BB66BA000234177 /* RubberDuckSpeechKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RubberDuckSpeechKit.h; path = "Rubber Duck/RubberDuckSpeechKit.h"; sourceTree = "<group>"; };
 		8D40BACE1BB621A3009FC4D4 /* Rubber Duck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rubber Duck.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D40BAD11BB621A3009FC4D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D40BAD31BB621A3009FC4D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +59,14 @@
 		8D40BAED1BB621A3009FC4D4 /* Rubber DuckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rubber DuckUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D40BAF11BB621A3009FC4D4 /* Rubber_DuckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rubber_DuckUITests.swift; sourceTree = "<group>"; };
 		8D40BAF31BB621A3009FC4D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D4786B11BB7314C00EEA104 /* earcon_cancel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_cancel.wav; sourceTree = "<group>"; };
+		8D4786B21BB7314C00EEA104 /* earcon_done_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_done_listening.wav; sourceTree = "<group>"; };
+		8D4786B31BB7314C00EEA104 /* earcon_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_listening.wav; sourceTree = "<group>"; };
+		8D4786B71BB7397D00EEA104 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		8D4786B91BB7398500EEA104 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8D4786BB1BB7398C00EEA104 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8D4786BD1BB73AFB00EEA104 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8D4786BF1BB73B0800EEA104 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D4786C01BB73B0800EEA104 /* AudioToolbox.framework in Frameworks */,
+				8D4786BE1BB73AFB00EEA104 /* AVFoundation.framework in Frameworks */,
+				8D4786BC1BB7398C00EEA104 /* Security.framework in Frameworks */,
+				8D4786BA1BB7398500EEA104 /* SystemConfiguration.framework in Frameworks */,
+				8D4786B81BB7397D00EEA104 /* CFNetwork.framework in Frameworks */,
+				8D2F05F41BB668BB00234177 /* SpeechKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +103,17 @@
 		8D40BAC51BB621A3009FC4D4 = {
 			isa = PBXGroup;
 			children = (
+				8D4786BF1BB73B0800EEA104 /* AudioToolbox.framework */,
+				8D4786BD1BB73AFB00EEA104 /* AVFoundation.framework */,
+				8D4786BB1BB7398C00EEA104 /* Security.framework */,
+				8D4786B91BB7398500EEA104 /* SystemConfiguration.framework */,
+				8D4786B71BB7397D00EEA104 /* CFNetwork.framework */,
+				8D4786B11BB7314C00EEA104 /* earcon_cancel.wav */,
+				8D4786B21BB7314C00EEA104 /* earcon_done_listening.wav */,
+				8D4786B31BB7314C00EEA104 /* earcon_listening.wav */,
+				8D2F05EF1BB6670A00234177 /* Rubber_Duck-Bridging-Header.h */,
+				8D2F05F51BB66BA000234177 /* RubberDuckSpeechKit.h */,
+				8D2F05F31BB668BB00234177 /* SpeechKit.framework */,
 				8D40BAD01BB621A3009FC4D4 /* Rubber Duck */,
 				8D40BAE51BB621A3009FC4D4 /* Rubber DuckTests */,
 				8D40BAF01BB621A3009FC4D4 /* Rubber DuckUITests */,
@@ -230,6 +267,9 @@
 			files = (
 				8D40BADC1BB621A3009FC4D4 /* LaunchScreen.storyboard in Resources */,
 				8D40BAD91BB621A3009FC4D4 /* Assets.xcassets in Resources */,
+				8D4786B51BB7314C00EEA104 /* earcon_done_listening.wav in Resources */,
+				8D4786B41BB7314C00EEA104 /* earcon_cancel.wav in Resources */,
+				8D4786B61BB7314C00EEA104 /* earcon_listening.wav in Resources */,
 				8D40BAD71BB621A3009FC4D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,10 +436,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Rubber Duck/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-Duck";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Rubber Duck/Rubber_Duck-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -407,10 +453,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Rubber Duck/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-Duck";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Rubber Duck/Rubber_Duck-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -481,6 +533,7 @@
 				8D40BAF81BB621A3009FC4D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D40BAF91BB621A3009FC4D4 /* Build configuration list for PBXNativeTarget "Rubber DuckTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +542,7 @@
 				8D40BAFB1BB621A3009FC4D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D40BAFC1BB621A3009FC4D4 /* Build configuration list for PBXNativeTarget "Rubber DuckUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +551,7 @@
 				8D40BAFE1BB621A3009FC4D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
