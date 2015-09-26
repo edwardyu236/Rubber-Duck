@@ -51,7 +51,12 @@ class ViewController: UIViewController {
         
         let alertController = UIAlertController(title: "Rubber Duck says...", message: message, preferredStyle: UIAlertControllerStyle.Alert)
         
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+                (UIAlertAction) -> Void in
+                if self.speechSynthesizer.speaking {
+                    self.speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Word)
+                }
+            })
         
         self.presentViewController(alertController, animated: true) {
             () -> Void in
