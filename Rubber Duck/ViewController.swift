@@ -121,31 +121,57 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
 
         let message = getResponseLocally(input)
         
-        let speechUtterance =  AVSpeechUtterance(string: message)
-        
-        let soundPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("siri_understood", ofType: "mp3")!)
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOfURL: soundPath)
-            audioPlayer!.prepareToPlay()
-            audioPlayer!.play()
-        } catch {
-            print("error finding siri understood")
-        }
-        
-        
-        let alertController = UIAlertController(title: "Rubber Duck says...", message: "\(message)\nin response to\n\"\(input)\"", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
-            (UIAlertAction) -> Void in
-            if self.speechSynthesizer.speaking {
-                self.speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Word)
-            }
+        if input.lowercaseString.containsString("give up") || input.lowercaseString.containsString("giving up") {
+            let alertController = UIAlertController(title: "Rubber Duck says...", message: "Listen to this...", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+                (UIAlertAction) -> Void in
+                
+                if self.audioPlayer!.playing {
+                    self.audioPlayer?.stop()
+                }
+                
+                })
+            
+            self.presentViewController(alertController, animated: true, completion: {
+                () -> Void in
+                let soundPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("give_up", ofType: "m4a")!)
+                do {
+                    self.audioPlayer = try AVAudioPlayer(contentsOfURL: soundPath)
+                    self.audioPlayer!.prepareToPlay()
+                    self.audioPlayer!.play()
+                } catch {
+                    print("error finding give up")
+                }
             })
+            
+        } else {
         
-        self.presentViewController(alertController, animated: true) {
-            () -> Void in
-//            self.audioPlayer!.play()
-            self.speechSynthesizer.speakUtterance(speechUtterance)
+            let soundPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("siri_understood", ofType: "mp3")!)
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOfURL: soundPath)
+                audioPlayer!.prepareToPlay()
+                audioPlayer!.play()
+            } catch {
+                print("error finding siri understood")
+            }
+            
+            let speechUtterance =  AVSpeechUtterance(string: message)
+            let alertController = UIAlertController(title: "Rubber Duck says...", message: "\(message)\nin response to\n\"\(input)\"", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+                (UIAlertAction) -> Void in
+                
+                if self.speechSynthesizer.speaking {
+                    self.speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Word)
+                }
+                })
+            
+            self.presentViewController(alertController, animated: true) {
+                () -> Void in
+    //            self.audioPlayer!.play()
+                self.speechSynthesizer.speakUtterance(speechUtterance)
+            }
         }
     }
     
