@@ -33,8 +33,6 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
 
     
     let speechSynthesizer = AVSpeechSynthesizer()
-    
-//    var voiceRecognizer = SKRecognizer(type: SKSearchRecognizerType, detection: UInt(SKShortEndOfSpeechDetection), language: "en-US", delegate: self as! SKRecognizerDelegate)
     var voiceRecognizer : SKRecognizer?
 
     var appDelegate : AppDelegate!
@@ -42,6 +40,7 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
     @IBOutlet weak var duckButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    var audioPlayer : AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,6 +115,14 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
         
         let speechUtterance =  AVSpeechUtterance(string: message)
         
+        let soundPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("siri_understood", ofType: "mp3")!)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: soundPath)
+            audioPlayer!.prepareToPlay()
+        } catch {
+            print("error finding siri understood")
+        }
+        
         
         let alertController = UIAlertController(title: "Rubber Duck says...", message: "\(message)\nin response to\n\"\(input)\"", preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -128,6 +135,7 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
         
         self.presentViewController(alertController, animated: true) {
             () -> Void in
+            self.audioPlayer!.play()
             self.speechSynthesizer.speakUtterance(speechUtterance)
         }
     }

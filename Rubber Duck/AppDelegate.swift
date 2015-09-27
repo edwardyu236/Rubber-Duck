@@ -42,12 +42,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setupSpeechKitConnection() -> Void {
         SpeechKit.setupWithID("NMDPTRIAL_edwardyu236_gmail_com20150926013319", host: "sandbox.nmdp.nuancemobility.net", port: 443, useSSL: false, delegate: nil)
-//        let earconStart: SKEarcon = SKEarcon.earconWithName("earcon_listening.wav") as! SKEarcon
-//        let earconStop: SKEarcon = SKEarcon.earconWithName("earcon_done_listening.wav") as! SKEarcon
-//        let earconCancel: SKEarcon = SKEarcon.earconWithName("earcon_cancel.wav") as! SKEarcon
-//        SpeechKit.setEarcon(earconStart, forType: UInt(SKStartRecordingEarconType))
-//        SpeechKit.setEarcon(earconStop, forType: UInt(SKStopRecordingEarconType))
-//        SpeechKit.setEarcon(earconCancel, forType: UInt(SKCancelRecordingEarconType))
+        let earconStart: SKEarcon = SKEarcon.earconWithName("siri_on.mp3") as! SKEarcon
+        let earconCancel: SKEarcon = SKEarcon.earconWithName("siri_off.mp3") as! SKEarcon
+
+        //        let earconStop: SKEarcon = SKEarcon.earconWithName("earcon_done_listening.wav") as! SKEarcon
+
+        //        SpeechKit.setEarcon(earconStop, forType: UInt(SKStopRecordingEarconType))
+
+        SpeechKit.setEarcon(earconStart, forType: UInt(SKStartRecordingEarconType))
+        SpeechKit.setEarcon(earconCancel, forType: UInt(SKCancelRecordingEarconType))
     }
 
 
