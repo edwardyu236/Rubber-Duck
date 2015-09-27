@@ -178,6 +178,8 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
     func getResponseLocally(input: String) -> String {
         let x = input.lowercaseString
         switch (x) {
+        case let x where x.containsString("what's the good word"):
+            return "To Hell With georgia"
         case let x where x.containsString("going on"):
             return beginnerMessages[random() % beginnerMessages.count]
         case let x where x.containsString("sh*t") || x.containsString("f*ck") || x.containsString("damn"):
