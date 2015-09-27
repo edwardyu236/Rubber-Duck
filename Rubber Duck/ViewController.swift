@@ -122,8 +122,6 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
     
     
     func displayAndSpeakResponse(input input: String) -> Void {
-
-        let message = getResponse(input)
         
         if input.lowercaseString.containsString("give up") || input.lowercaseString.containsString("giving up") {
             let alertController = UIAlertController(title: "Rubber Duck says...", message: "Listen to this...", preferredStyle: UIAlertControllerStyle.Alert)
@@ -149,33 +147,11 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
                 }
             })
             
-        } else {
-        
-            let soundPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("siri_understood", ofType: "mp3")!)
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOfURL: soundPath)
-                audioPlayer!.prepareToPlay()
-                audioPlayer!.play()
-            } catch {
-                print("error finding siri understood")
-            }
-            
-            let speechUtterance =  AVSpeechUtterance(string: message)
-            let alertController = UIAlertController(title: "Rubber Duck says...", message: "\(message)\nin response to\n\"\(input)\"", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
-                (UIAlertAction) -> Void in
-                
-                if self.speechSynthesizer.speaking {
-                    self.speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Word)
-                }
-                })
-            
-            self.presentViewController(alertController, animated: true) {
-                () -> Void in
-    //            self.audioPlayer!.play()
-                self.speechSynthesizer.speakUtterance(speechUtterance)
-            }
+        } else if input.lowercaseString.containsString("what's the good word") {
+            speak("To Hell With Georgia", input: input)
+
+        }else {
+            getResponse(input)
         }
     }
     
@@ -191,17 +167,45 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
         }
     }
     
-    func getResponse(input: String) -> String {
+    func getResponse(input: String) {
         socket.emit("client_data", input)
         socket.on("server_data") {
             (data: [AnyObject], emitter: SocketAckEmitter?) -> Void in
             if let output = data.first {
-                self.currentResponse = "\(output)"
+                self.speak("\(output)", input: input)
             } else {
-                self.currentResponse = self.getResponseLocally(input)
+                let localResponse = self.getResponseLocally(input)
+                self.speak(localResponse, input: input)
             }
         }
-        return currentResponse
+    }
+    
+    func speak(message: String, input: String) -> Void {
+        let soundPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("siri_understood", ofType: "mp3")!)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: soundPath)
+            audioPlayer!.prepareToPlay()
+            audioPlayer!.play()
+        } catch {
+            print("error finding siri understood")
+        }
+        
+        let speechUtterance =  AVSpeechUtterance(string: message)
+        let alertController = UIAlertController(title: "Rubber Duck says...", message: "\(message)\nin response to\n\"\(input)\"", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
+            (UIAlertAction) -> Void in
+            
+            if self.speechSynthesizer.speaking {
+                self.speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Word)
+            }
+            })
+        
+        self.presentViewController(alertController, animated: true) {
+            () -> Void in
+            //            self.audioPlayer!.play()
+            self.speechSynthesizer.speakUtterance(speechUtterance)
+        }
     }
 
 }
