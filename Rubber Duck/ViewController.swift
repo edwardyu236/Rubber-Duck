@@ -66,6 +66,7 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
             if let recognizer = voiceRecognizer {
                 recognizer.stopRecording()
                 recognizer.cancel()
+                sender.selected = !sender.selected
             }
             
         }
@@ -119,6 +120,7 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: soundPath)
             audioPlayer!.prepareToPlay()
+            audioPlayer!.play()
         } catch {
             print("error finding siri understood")
         }
@@ -135,7 +137,7 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
         
         self.presentViewController(alertController, animated: true) {
             () -> Void in
-            self.audioPlayer!.play()
+//            self.audioPlayer!.play()
             self.speechSynthesizer.speakUtterance(speechUtterance)
         }
     }
