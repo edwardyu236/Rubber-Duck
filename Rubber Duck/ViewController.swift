@@ -42,7 +42,7 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
     var voiceRecognizer : SKRecognizer?
 
     var appDelegate : AppDelegate!
-    let socket = SocketIOClient(socketURL: "http://128.61.63.146:8002", opts: ["log":true])
+    let socket = SocketIOClient(socketURL: "http://104.131.194.162:7202", opts: ["log":true])
     var currentResponse = ""
     
     
@@ -148,7 +148,7 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
             })
             
         } else if input.lowercaseString.containsString("what's the good word") {
-            speak("To Hell With Georgia", input: input)
+            speak("To Hell With Georgia", input: input, local: true)
 
         }else {
             getResponse(input)
@@ -172,15 +172,15 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
         socket.on("server_data") {
             (data: [AnyObject], emitter: SocketAckEmitter?) -> Void in
             if let output = data.first {
-                self.speak("\(output)", input: input)
+                self.speak("\(output)", input: input, local: false)
             } else {
                 let localResponse = self.getResponseLocally(input)
-                self.speak(localResponse, input: input)
+                self.speak(localResponse, input: input, local:true)
             }
         }
     }
     
-    func speak(message: String, input: String) -> Void {
+    func speak(message: String, input: String, local: Bool) -> Void {
         let soundPath = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("siri_understood", ofType: "mp3")!)
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: soundPath)
@@ -191,7 +191,12 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
         }
         
         let speechUtterance =  AVSpeechUtterance(string: message)
-        let alertController = UIAlertController(title: "Rubber Duck says...", message: "\(message)\nin response to\n\"\(input)\"", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController : UIAlertController
+        if local {
+            alertController = UIAlertController(title: "Rubber Duck says...", message: "\(message)\nin response to\n\"\(input)\"", preferredStyle: UIAlertControllerStyle.Alert)
+        } else {
+            alertController = UIAlertController(title: "Rubber Duck says...", message: "\(message)", preferredStyle: UIAlertControllerStyle.Alert)
+        }
         
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
             (UIAlertAction) -> Void in
