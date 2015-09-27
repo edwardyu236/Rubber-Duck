@@ -450,6 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-Duck";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./Rubber Duck/Rubber_Duck-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -467,6 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-Duck";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./Rubber Duck/Rubber_Duck-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
