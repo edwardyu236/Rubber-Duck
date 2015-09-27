@@ -30,6 +30,7 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
         "Open a terminal window and type 'sudo rm -rf /'. I'm not responsible for any lost files though.",
         "Just give up. It's impossible to fix thousands of lines of spaghetti code anyways.", "Maybe a segmentation fault is just the best fate of your shoddy program.",
         "Say 'aluminium' instead of 'aluminum'. Sir Ive might help you in gratitude.", "Try slacking off. After all, you have the legitimate excuse of 'my code's compiling'."]
+
     
     let speechSynthesizer = AVSpeechSynthesizer()
     
@@ -98,10 +99,9 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
         if numberOfResults > 0 {
             let textResult = results.firstResult()
             print(textResult)
-            let alertController = UIAlertController(title: "You said", message: textResult, preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler:nil))
-            presentViewController(alertController, animated: true, completion: nil)
-        }
+            self.displayAndSpeakResponse(input: textResult)
+
+            }
         duckButton.selected = !duckButton.selected
         
         if let recognizer = voiceRecognizer {
@@ -110,13 +110,14 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
         
     }
     
-    func displayAndSpeakMessage() -> Void {
+    
+    func displayAndSpeakResponse(input input: String) -> Void {
         let message = messages[random() % messages.count]
         
         let speechUtterance =  AVSpeechUtterance(string: message)
         
         
-        let alertController = UIAlertController(title: "Rubber Duck says...", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "Rubber Duck says...", message: "\(message)\nin response to\n\"\(input)\"", preferredStyle: UIAlertControllerStyle.Alert)
         
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
             (UIAlertAction) -> Void in
