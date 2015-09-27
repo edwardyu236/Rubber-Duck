@@ -42,6 +42,9 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
     var voiceRecognizer : SKRecognizer?
 
     var appDelegate : AppDelegate!
+    let socket = SocketIOClient(socketURL: "http://128.61.63.146:8002", opts: ["log":true])
+    var currentResponse = ""
+    
     
     @IBOutlet weak var duckButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -55,6 +58,7 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
         print(SpeechKitApplicationKey)
         appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.setupSpeechKitConnection()
+        socket.connect()
     }
 
     override func didReceiveMemoryWarning() {
@@ -119,7 +123,7 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
     
     func displayAndSpeakResponse(input input: String) -> Void {
 
-        let message = getResponseLocally(input)
+        let message = getResponse(input)
         
         if input.lowercaseString.containsString("give up") || input.lowercaseString.containsString("giving up") {
             let alertController = UIAlertController(title: "Rubber Duck says...", message: "Listen to this...", preferredStyle: UIAlertControllerStyle.Alert)
@@ -185,6 +189,19 @@ class ViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate 
         default:
             return generalMessages[random() % generalMessages.count]
         }
+    }
+    
+    func getResponse(input: String) -> String {
+        socket.emit("client_data", input)
+        socket.on("server_data") {
+            (data: [AnyObject], emitter: SocketAckEmitter?) -> Void in
+            if let output = data.first {
+                self.currentResponse = "\(output)"
+            } else {
+                self.currentResponse = self.getResponseLocally(input)
+            }
+        }
+        return currentResponse
     }
 
 }
