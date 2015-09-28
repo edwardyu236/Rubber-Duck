@@ -1,7 +1,7 @@
 # Rubber-Duck
 An voice-interactive Rubber Duck to help you debug your code!
 
-![User Interface](/Screenshot1.jpg?raw=true "User Interface") ![Response](/Screenshot2.jpg?raw=true "Response")
+![User Interface](/Screen1.jpg?raw=true "User Interface") ![Response](/Screen2.jpg?raw=true "Response")
 
 This project was created at Georgia Tech's [HackGT](http://www.hackgt.com/) hackathon during Sep 25-27. 
 Based off of the concept of [Rubber Duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging),
