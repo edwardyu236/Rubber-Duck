@@ -7,7 +7,7 @@ This project was created at Georgia Tech's [HackGT](http://www.hackgt.com/) hack
 Based off of the concept of [Rubber Duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging),
 this iOS app listens to your question or complaint when you tap the rubber duck via 
 [Nuance's SpeechKit API (part of Dragon Mobile SDK)](http://developer.nuance.com/public/Help/DragonMobileSDKReference_iOS/SpeechKit_Guide/Introduction.html),
-sends the question off to our server back-end
+sends the question off to our [server back-end]( https://github.com/sand500/javascriptPlayground)
 (which retrieves the first relevant result from [Stack Overflow](http://stackoverflow.com) via Google's APIs),
 and the result is delivered to you Apple's own [AVSpeechSynthesizer](https://developer.apple.com/library/prerelease/ios/documentation/AVFoundation/Reference/AVSpeechSynthesizer_Ref/index.html)
 on iOS.
@@ -16,7 +16,7 @@ on iOS.
 Languages/Tools
 - iOS: Swift, Objective-C, Nuance Dragon Mobile SDK (SpeechKit), AVFoundation (AVSpeechSynthesizer)
 - Communications: Socket.IO
-- Server: Node.js, Google APIs
+- [Server](https://github.com/sand500/javascriptPlayground): Node.js, Google APIs
 
 Known problems
 - The fallback to local response generation doesn't always trigger when results are not available from the server.
