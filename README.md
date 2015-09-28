@@ -3,6 +3,8 @@ A voice-interactive Rubber Duck to help you debug your code!
 
 ![User Interface](/Screen1.jpg?raw=true "User Interface") ![Response](/Screen2.jpg?raw=true "Response")
 
+[YouTube demonstration!](https://www.youtube.com/watch?v=1plF4AJrHxU&feature=youtu.be)
+
 This project was created at Georgia Tech's [HackGT](http://www.hackgt.com/) hackathon during Sep 25-27. 
 Based off of the concept of [Rubber Duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging),
 this iOS app listens to your question or complaint when you tap the rubber duck via 
