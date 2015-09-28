@@ -1,5 +1,5 @@
 # Rubber-Duck
-An voice-interactive Rubber Duck to help you debug your code!
+A voice-interactive Rubber Duck to help you debug your code!
 
 ![User Interface](/Screen1.jpg?raw=true "User Interface") ![Response](/Screen2.jpg?raw=true "Response")
 
