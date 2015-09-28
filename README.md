@@ -19,6 +19,7 @@ Languages/Tools
 Known problems
 - The fallback to local response generation doesn't always trigger when results are not available from the server.
 - Server doesn't always sanitize StackOverflow's format specifiers
+- Currently the text from voice recognition only appears when the local responses are triggered; it is removed for server-based responses temporarily
 
 Future plans
 - Refactoring
