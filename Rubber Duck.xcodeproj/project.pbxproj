@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D277BB51BB7D26600A4DB43 /* give_up.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D277BB41BB7D26600A4DB43 /* give_up.m4a */; settings = {ASSET_TAGS = (); }; };
-		8D2F05F41BB668BB00234177 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2F05F31BB668BB00234177 /* SpeechKit.framework */; settings = {ASSET_TAGS = (); }; };
+		8D277BB51BB7D26600A4DB43 /* give_up.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8D277BB41BB7D26600A4DB43 /* give_up.m4a */; };
+		8D2F05F41BB668BB00234177 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2F05F31BB668BB00234177 /* SpeechKit.framework */; };
 		8D40BAD21BB621A3009FC4D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAD11BB621A3009FC4D4 /* AppDelegate.swift */; };
 		8D40BAD41BB621A3009FC4D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D40BAD31BB621A3009FC4D4 /* ViewController.swift */; };
 		8D40BAD71BB621A3009FC4D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D40BAD51BB621A3009FC4D4 /* Main.storyboard */; };
@@ -21,25 +21,25 @@
 		8D4786BC1BB7398C00EEA104 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4786BB1BB7398C00EEA104 /* Security.framework */; };
 		8D4786BE1BB73AFB00EEA104 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4786BD1BB73AFB00EEA104 /* AVFoundation.framework */; };
 		8D4786C01BB73B0800EEA104 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4786BF1BB73B0800EEA104 /* AudioToolbox.framework */; };
-		8D4786C41BB76EE100EEA104 /* siri_off.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786C11BB76EE100EEA104 /* siri_off.mp3 */; settings = {ASSET_TAGS = (); }; };
-		8D4786C51BB76EE100EEA104 /* siri_on.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786C21BB76EE100EEA104 /* siri_on.mp3 */; settings = {ASSET_TAGS = (); }; };
-		8D4786C61BB76EE100EEA104 /* siri_understood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786C31BB76EE100EEA104 /* siri_understood.mp3 */; settings = {ASSET_TAGS = (); }; };
-		8DA058C81BB82CDE00F50C13 /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058B81BB82CDE00F50C13 /* SocketAckEmitter.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058C91BB82CDE00F50C13 /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058B91BB82CDE00F50C13 /* SocketAckManager.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058CA1BB82CDE00F50C13 /* SocketAnyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058BA1BB82CDE00F50C13 /* SocketAnyEvent.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058CB1BB82CDE00F50C13 /* SocketEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058BB1BB82CDE00F50C13 /* SocketEngine.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058CC1BB82CDE00F50C13 /* SocketEngineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058BC1BB82CDE00F50C13 /* SocketEngineClient.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058CD1BB82CDE00F50C13 /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058BD1BB82CDE00F50C13 /* SocketEventHandler.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058CE1BB82CDE00F50C13 /* SocketFixUTF8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058BE1BB82CDE00F50C13 /* SocketFixUTF8.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058CF1BB82CDE00F50C13 /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058BF1BB82CDE00F50C13 /* SocketIOClient.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058D01BB82CDE00F50C13 /* SocketIOClientStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C01BB82CDE00F50C13 /* SocketIOClientStatus.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058D11BB82CDE00F50C13 /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C11BB82CDE00F50C13 /* SocketLogger.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058D21BB82CDE00F50C13 /* SocketPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C21BB82CDE00F50C13 /* SocketPacket.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058D31BB82CDE00F50C13 /* SocketParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C31BB82CDE00F50C13 /* SocketParser.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058D41BB82CDE00F50C13 /* SocketStringReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C41BB82CDE00F50C13 /* SocketStringReader.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058D51BB82CDE00F50C13 /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C51BB82CDE00F50C13 /* SocketTypes.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058D61BB82CDE00F50C13 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C61BB82CDE00F50C13 /* SwiftRegex.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA058D71BB82CDE00F50C13 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C71BB82CDE00F50C13 /* WebSocket.swift */; settings = {ASSET_TAGS = (); }; };
+		8D4786C41BB76EE100EEA104 /* siri_off.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786C11BB76EE100EEA104 /* siri_off.mp3 */; };
+		8D4786C51BB76EE100EEA104 /* siri_on.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786C21BB76EE100EEA104 /* siri_on.mp3 */; };
+		8D4786C61BB76EE100EEA104 /* siri_understood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D4786C31BB76EE100EEA104 /* siri_understood.mp3 */; };
+		8DA058C81BB82CDE00F50C13 /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058B81BB82CDE00F50C13 /* SocketAckEmitter.swift */; };
+		8DA058C91BB82CDE00F50C13 /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058B91BB82CDE00F50C13 /* SocketAckManager.swift */; };
+		8DA058CA1BB82CDE00F50C13 /* SocketAnyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058BA1BB82CDE00F50C13 /* SocketAnyEvent.swift */; };
+		8DA058CB1BB82CDE00F50C13 /* SocketEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058BB1BB82CDE00F50C13 /* SocketEngine.swift */; };
+		8DA058CC1BB82CDE00F50C13 /* SocketEngineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058BC1BB82CDE00F50C13 /* SocketEngineClient.swift */; };
+		8DA058CD1BB82CDE00F50C13 /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058BD1BB82CDE00F50C13 /* SocketEventHandler.swift */; };
+		8DA058CE1BB82CDE00F50C13 /* SocketFixUTF8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058BE1BB82CDE00F50C13 /* SocketFixUTF8.swift */; };
+		8DA058CF1BB82CDE00F50C13 /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058BF1BB82CDE00F50C13 /* SocketIOClient.swift */; };
+		8DA058D01BB82CDE00F50C13 /* SocketIOClientStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C01BB82CDE00F50C13 /* SocketIOClientStatus.swift */; };
+		8DA058D11BB82CDE00F50C13 /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C11BB82CDE00F50C13 /* SocketLogger.swift */; };
+		8DA058D21BB82CDE00F50C13 /* SocketPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C21BB82CDE00F50C13 /* SocketPacket.swift */; };
+		8DA058D31BB82CDE00F50C13 /* SocketParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C31BB82CDE00F50C13 /* SocketParser.swift */; };
+		8DA058D41BB82CDE00F50C13 /* SocketStringReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C41BB82CDE00F50C13 /* SocketStringReader.swift */; };
+		8DA058D51BB82CDE00F50C13 /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C51BB82CDE00F50C13 /* SocketTypes.swift */; };
+		8DA058D61BB82CDE00F50C13 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C61BB82CDE00F50C13 /* SwiftRegex.swift */; };
+		8DA058D71BB82CDE00F50C13 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA058C71BB82CDE00F50C13 /* WebSocket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,7 +288,7 @@
 				TargetAttributes = {
 					8D40BACD1BB621A3009FC4D4 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 89JRG4TE28;
+						DevelopmentTeam = X24D283JL6;
 					};
 					8D40BAE11BB621A3009FC4D4 = {
 						CreatedOnToolsVersion = 7.0;
@@ -521,7 +521,7 @@
 				);
 				INFOPLIST_FILE = "Rubber Duck/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-Duck";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.edwardyu236.Rubber-Duck";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./Rubber Duck/Rubber_Duck-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -540,7 +540,7 @@
 				);
 				INFOPLIST_FILE = "Rubber Duck/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.therubberducklings.Rubber-Duck";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.edwardyu236.Rubber-Duck";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./Rubber Duck/Rubber_Duck-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
